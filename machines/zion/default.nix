@@ -11,7 +11,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Networking
-  networking.hostName = "nixos";
+  networking.hostName = "zion";
   networking.wireless.iwd.enable = true;
   networking.nameservers = [ "192.168.12.60" ];
  

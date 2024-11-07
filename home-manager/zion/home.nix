@@ -7,7 +7,7 @@
   home.homeDirectory = "/home/archvisions";
 
   imports = [
-    ./home-manager/modules/picom.nix
+    ../../modules/home-manager
   ]; 
   
   home.packages = with pkgs; [
