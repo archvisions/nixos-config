@@ -46,7 +46,12 @@
      htop
      bitwarden-desktop
      joplin-desktop
-     (slstatus.overrideAttrs (_: { src = /home/archvisions/slstatus; })) 
+     (slstatus.overrideAttrs (_: { src = fetchGit {
+       url = https://github.com/archvisions/slstatus_dwm.git; 
+       ref = "master";
+       rev = "6cb463d41646e56cc6eb2feb13aabb85f5f955a4"; 
+       };
+      })) 
 #     blender # Blender is currently broken
      prismlauncher
      pamixer
