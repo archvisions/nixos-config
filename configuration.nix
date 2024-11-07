@@ -59,8 +59,8 @@
   services.xserver.windowManager.dwm.enable = true;
   services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
     src = fetchGit {
-      url = "https://codeberg.org/firedragon/firedragon-dwm.git";
-      ref = "main";
+      url = "https://github.com/archvisions/archvisions-dwm.git";
+      ref = "master";
       rev = "710be6f3308fe5014829c4ed59248ef208c29150";
     };
     nativeBuildInputs = with pkgs; [
