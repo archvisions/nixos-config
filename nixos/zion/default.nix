@@ -14,7 +14,7 @@
   # Networking
   networking.hostName = "zion";
   networking.wireless.iwd.enable = true;
-  networking.nameservers = [ "192.168.12.60" ];
+  networking.nameservers = [ "192.168.12.117" ];
  
   # Allow Unfree repo
   nixpkgs.config.allowUnfree = true;
