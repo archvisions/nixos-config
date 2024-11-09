@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./nvidia.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -15,6 +16,9 @@
   networking.wireless.iwd.enable = true;
   networking.nameservers = [ "192.168.12.60" ];
  
+  # Allow Unfree repo
+  nixpkgs.config.allowUnfree = true;
+
   # Time
   time.timeZone = "America/Chicago";
   time.hardwareClockInLocalTime = true;
