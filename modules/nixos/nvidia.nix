@@ -28,7 +28,7 @@
     };
 
   specialisation = {
-    nvidia-power.configuration = {
+    nvidia.configuration = {
 
       hardware.nvidia = {
         prime.sync.enable = lib.mkForce true;
