@@ -38,7 +38,6 @@
   users.users.archvisions = {
      isNormalUser = true;
      extraGroups = [ "wheel" ];
-    ];
    };
   
   # Enable DWM
