@@ -8,22 +8,31 @@
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
-    nixosConfigurations = {
-      zion = nixpkgs.lib.nixosSystem {
+    nixosConfigurations =
+      let
+        specialArgs = { inherit inputs; };
         system = "x86_64-linux";
+      in
+      {
+      
+      zion = nixpkgs.lib.nixosSystem {
         modules = [
-          ./machines/zion/default.nix
+          ./nixos/zion/default.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.archvisions = import ./home-manager/zion/home.nix;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
+            home-manager.users.archvisions = import ./nixos/zion/home.nix;
           }
         ];
       };
+      
+      midnight = nixpkgs.lib.nixosSystem {
+        modules = [
+          ./nixos/midnight/default.nix
+        ];
+      };
+
     };
   };
 }

@@ -75,11 +75,6 @@
       xorg.libXinerama
     ];
   };
-  # Enable Picom
-  services.picom = {
-    enable = true;
-    backend = "glx";
-  };
   # System packages
   environment.systemPackages = with pkgs; [
     wget
