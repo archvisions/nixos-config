@@ -5,6 +5,7 @@
     [
       ./hardware-configuration.nix
       ./nvidia.nix
+      ../../modules/nixos/bluetooth.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
