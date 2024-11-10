@@ -1,7 +1,15 @@
 { pkgs, config, ... }:
 
 {
+
+# Allow Blocky through Firewall 
+networking.firewall.allowedTCPPorts = [ 53 ];
+networking.firewall.allowedUDPPorts = [ 53 ];
+
+# Logs Directory for Blocky
 systemd.services.blocky.serviceConfig.LogsDirectory = [ "blocky" ];
+
+# Blocky Config
 services.blocky = {
     enable = true;
     settings = {
