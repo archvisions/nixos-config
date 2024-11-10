@@ -4,7 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./homelab/blocky/blocky.nix
+      ../../modules/homelab/default.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -23,6 +23,7 @@
        tmux
        cryptsetup
        restic
+       git
     ];
    };
 
