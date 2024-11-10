@@ -12,7 +12,6 @@
       PasswordAuthentication = true;
       X11Forwarding = false;
       PermitRootLogin = "no";
-      openFirewall = true;
     };
   };
 }
