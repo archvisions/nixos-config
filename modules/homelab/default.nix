@@ -2,6 +2,6 @@
   imports = [
     ./blocky.nix
     ./caddy.nix
-    ./smb.nix
+    ./samba.nix
  ];
 }
