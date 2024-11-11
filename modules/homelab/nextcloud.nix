@@ -1,9 +1,24 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
+  sops.secrets.nextcloud = {
+    sopsFile = ../../secrets/secrets.yaml;
+    owner = "nextcloud";
+    group = "nextcloud";
+  };
+
+  services = {
+    nginx.virtualHosts = {
+      "nc.archvisions.xyz" = {
+        forceSSL = false;
+        enableACME = false;
+        listen = [ { addr = "0.0.0.0"; port = 8080; } ];
+      };
+    };
+
     nextcloud = {
       enable = true;
-      hostName = "cloud.example.com";
+      hostName = "nc.archvisions.xyz";
 
       package = pkgs.nextcloud30;
 
@@ -12,24 +27,19 @@
       configureRedis = true;
 
       maxUploadSize = "8G";
-      https = true;
-      enableBrokenCiphersForSSE = false;
+      https = false;
 
       autoUpdateApps.enable = true;
       extraAppsEnable = true;
       extraApps = with config.services.nextcloud.package.packages.apps; {
-
         inherit calendar contacts mail notes tasks;
-
-        };
       };
 
       config = {
         overwriteProtocol = "https";
-        defaultPhoneRegion = "PT";
         dbtype = "pgsql";
         adminuser = "admin";
-        adminpassFile = "/path/to/nextcloud-admin-pass";
+        adminpassFile = config.sops.secrets.nextcloud.path;
       };
     };
   };
