@@ -5,18 +5,19 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    inputs.sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, sops-nix, ... }: {
     nixosConfigurations =
       let
-        specialArgs = { inherit inputs; };
         system = "x86_64-linux";
       in
       {
       
       zion = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
         modules = [
           ./nixos/zion/default.nix
           home-manager.nixosModules.home-manager
@@ -29,6 +30,7 @@
       };
       
       midnight = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
         modules = [
           ./nixos/midnight/default.nix
         ];
