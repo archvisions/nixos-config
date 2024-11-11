@@ -12,6 +12,7 @@
    yazi
    gh
    git
+   (blender.override {cudaSupport=true;})
    xorg.xinit
    alacritty
    dmenu
