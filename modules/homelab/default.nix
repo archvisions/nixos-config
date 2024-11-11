@@ -5,5 +5,7 @@
     ./samba.nix
     ./ssh.nix
     ./sops.nix
+    ./nextcloud.nix
+    ./wireguard.nix
  ];
 }
