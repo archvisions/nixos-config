@@ -1,0 +1,7 @@
+keys:
+  - &midnight age1w33c7y680rk6dva3fxfed3fkk7wp0crk6uuqyfx3rav3rktr8q5qzwk6pc
+creation_rules:
+  - path_regex: secrets/secrets.yaml$
+    key_groups:
+    - age:
+      - *midnight
