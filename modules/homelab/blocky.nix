@@ -25,7 +25,7 @@ services.blocky = {
         customTTL = "1h";
         filterUnmappedTypes = true;
         mapping = {
-          "archvisions.xyz" = "192.168.12.213";
+          "archvisions.xyz" = "192.168.12.117";
         };
       };
       caching = {
