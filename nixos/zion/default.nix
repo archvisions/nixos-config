@@ -5,7 +5,6 @@
     [
       ./hardware-configuration.nix
       ../../modules/nixos/default.nix
-      ../../modules/sops.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
