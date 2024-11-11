@@ -12,7 +12,7 @@
       "nc.archvisions.xyz" = {
         forceSSL = false;
         enableACME = false;
-        listen = [ { addr = "0.0.0.0"; port = 8080; } ];
+        listen = [ { addr = "127.0.0.1"; port = 8080; } ];
       };
     };
 
@@ -27,7 +27,7 @@
       configureRedis = true;
 
       maxUploadSize = "8G";
-      https = false;
+      https = true;
 
       autoUpdateApps.enable = true;
       extraAppsEnable = true;
@@ -36,7 +36,6 @@
       };
 
       config = {
-        overwriteProtocol = "https";
         dbtype = "pgsql";
         adminuser = "admin";
         adminpassFile = config.sops.secrets.nextcloud.path;

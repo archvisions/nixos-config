@@ -7,5 +7,6 @@
     ./sops.nix
     ./nextcloud.nix
     ./wireguard.nix
+    ./navidrome.nix
  ];
 }
