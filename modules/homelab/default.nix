@@ -10,5 +10,6 @@
     ./navidrome.nix
     ./jellyfin.nix
     ./nfs.nix
+    ./minecraft.nix
   ];
 }
