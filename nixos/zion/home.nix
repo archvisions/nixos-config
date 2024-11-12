@@ -16,6 +16,7 @@
    xorg.xinit
    alacritty
    dmenu
+   feh
    mullvad-browser
    nwg-look
    tor-browser
