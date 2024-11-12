@@ -3,5 +3,6 @@
 {
   imports = [
     ./picom.nix
+    ./gnupg.nix
   ];
 }

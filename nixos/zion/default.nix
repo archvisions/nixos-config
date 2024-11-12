@@ -22,7 +22,10 @@
   # Time
   time.timeZone = "America/Chicago";
   time.hardwareClockInLocalTime = true;
-  
+ 
+  # Fix Gnome Pinentry
+  services.dbus.packages = [ pkgs.gcr ];
+ 
   # Locales
   i18n.defaultLocale = "en_US.UTF-8";
 
