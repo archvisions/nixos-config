@@ -18,6 +18,11 @@
           import tls
           reverse_proxy localhost:8080
         }
+        
+        vw.archvisions.xyz {
+          import tls
+          reverse_proxy localhost:8000
+        }
     '';
   };
 }

@@ -32,7 +32,7 @@
       autoUpdateApps.enable = true;
       extraAppsEnable = true;
       extraApps = with config.services.nextcloud.package.packages.apps; {
-        inherit calendar contacts mail notes tasks;
+        inherit calendar contacts mail notes tasks music;
       };
 
       config = {

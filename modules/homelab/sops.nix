@@ -6,9 +6,9 @@
   ];
 
   sops = {
-    defaultSopsFile = ../secrets/secrets.yml;
+    defaultSopsFile = ../../secrets/secrets.yml;
     age = {
-      keyFile = "/var/lib/sops/age/keys.txt";
+      keyFile = "/var/lib/sops-nix/key.txt";
     };
   };
 }
