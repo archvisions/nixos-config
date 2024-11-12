@@ -9,5 +9,6 @@
     ./samba.nix
     ./navidrome.nix
     ./jellyfin.nix
+    ./nfs.nix
   ];
 }
