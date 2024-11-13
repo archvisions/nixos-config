@@ -23,6 +23,11 @@
           import tls
           reverse_proxy localhost:9010
         }
+
+        nc.archvisions.xyz {
+          import tls
+          reverse_proxy localhost:8080
+        }
     '';
   };
 }

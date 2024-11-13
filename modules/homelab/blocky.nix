@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
 
@@ -32,6 +32,7 @@ services.blocky = {
         minTime = "5m";
         maxTime = "30m";
         prefetching = true;
+        prefetchExpires = "1h";
       };
       queryLog = {
         type = "csv";
@@ -41,7 +42,7 @@ services.blocky = {
       # Blocking
       blocking = {
         clientGroupsBlock = {
-        default = [ "ads" "no_gafam" "tracking" ];
+        default = [ "ads" "no_fam" "tracking" ];
         };
         denylists = {
           ads = [
@@ -49,10 +50,8 @@ services.blocky = {
           "https://someonewhocares.org/hosts/zero/hosts"
           "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/ultimate.txt"
           "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext"
-          "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/popupads.txt"
           ];
-          no_gafam = [
-          "https://raw.githubusercontent.com/nickspaargaren/no-google/refs/heads/master/pihole-google.txt"
+          no_fam = [
           "https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt"
           "https://raw.githubusercontent.com/nickspaargaren/no-amazon/refs/heads/master/amazon.txt"
           "https://raw.githubusercontent.com/jmdugan/blocklists/master/corporations/microsoft/all"

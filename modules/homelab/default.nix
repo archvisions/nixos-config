@@ -12,5 +12,6 @@
     ./nfs.nix
     ./minecraft.nix
     ./miniflux.nix
+    ./nextcloud.nix
   ];
 }

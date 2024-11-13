@@ -27,8 +27,6 @@
 
       configureRedis = true;
 
-      home = "/nas/nextcloud";
-
       maxUploadSize = "8G";
       https = true;
 
@@ -38,7 +36,7 @@
         inherit calendar contacts notes tasks music;
       };
 
-      settings.overwriteprotocol = "https";
+#      settings.overwriteprotocol = "https";
       config = {
         dbtype = "pgsql";
         adminuser = "archvisions";
