@@ -14,16 +14,14 @@
           reverse_proxy localhost:4533
         }
 
-        nc.archvisions.xyz {
-          import tls
-          redir /.well-known/carddav /remote.php/dav/ 301
-          redir /.well-known/caldav /remote.php/dav/ 301
-          reverse_proxy localhost:8080
-        }
-        
         vw.archvisions.xyz {
           import tls
           reverse_proxy localhost:8000
+        }
+
+        rss.archvisions.xyz {
+          import tls
+          reverse_proxy localhost:9010
         }
     '';
   };

@@ -11,5 +11,6 @@
     ./jellyfin.nix
     ./nfs.nix
     ./minecraft.nix
+    ./miniflux.nix
   ];
 }
