@@ -2,7 +2,7 @@
   imports = [
     ./picom.nix
     ./gnupg.nix
-    ./alacritty.nix
+    ./kitty.nix
     ./gtk.nix
     ./dunst.nix
     ./yazi.nix

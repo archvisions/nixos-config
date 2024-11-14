@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  programs.alacritty = {
+  programs.kitty = {
     enable = true;
     catppuccin = { 
       enable = true;

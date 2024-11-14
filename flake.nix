@@ -21,8 +21,8 @@
       url = "github:Infinidoge/nix-minecraft";
     };
 
-    catppuccin.url = {
-      "github:catppuccin/nix";
+    catppuccin = {
+      url = "github:catppuccin/nix";
     };
 
   };

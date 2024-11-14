@@ -52,7 +52,7 @@
     src = fetchGit {
       url = "https://github.com/archvisions/archvisions-dwm.git";
       ref = "master";
-      rev = "3835039c35f77c12da5860a46748b8aec4ebdccf";
+      rev = "6d482dec02b5f71177bf5b646359849650ff9cfd";
     };
     nativeBuildInputs = with pkgs; [
       xorg.libX11
