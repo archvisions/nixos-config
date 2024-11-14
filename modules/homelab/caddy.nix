@@ -28,6 +28,12 @@
           import tls
           reverse_proxy localhost:8080
         }
+
+        media.archvisions.xyz {
+          import tls
+          reverse_proxy localhost:8096
+
+        }
     '';
   };
 }
