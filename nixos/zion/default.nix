@@ -13,9 +13,11 @@
 
   # Networking
   networking.hostName = "zion";
-  networking.wireless.iwd.enable = true;
+  networking.networkmanager.enable = true;
+  networking.networkmanager.dns = "none";
   networking.nameservers = [ "192.168.12.117" ];
- 
+
+  services.mullvad-vpn.enable = true; 
   # Allow Unfree repo
   nixpkgs.config.allowUnfree = true;
 
@@ -33,7 +35,8 @@
   services.xserver.enable = true;
   services.xserver.displayManager.startx.enable = true;
   services.libinput.enable = true;
-  
+  services.xserver.dpi = 81;  
+
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
  

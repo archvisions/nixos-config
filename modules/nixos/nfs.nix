@@ -6,6 +6,6 @@
   fileSystems."/home/archvisions/nas" = {
     device ="192.168.12.117:/nas";
     fsType = "nfs";
-    options = [ "x-systemd.automount" "noauto" ];
+    options = [ "x-systemd.automount" "x-systemd.idle-timeout=300" "noauto" ];
   };
 }

@@ -14,18 +14,24 @@
    git
    (blender.override {cudaSupport=true;})
    xorg.xinit
+   signal-desktop
+   nerdfonts
+   networkmanagerapplet
+   adwaita-icon-theme
+   dunst
+   joplin-desktop
+   inter
    alacritty
    dmenu
    feh
    mullvad-browser
-   nwg-look
    tor-browser
    htop
    bitwarden-desktop
-   joplin-desktop
    prismlauncher
    pamixer
    brave
+   fira-code
    thunderbird
    brightnessctl   
    (slstatus.overrideAttrs (_: { src = fetchGit {
@@ -36,7 +42,13 @@
    }))
   ]; 
 
-  fonts.fontconfig.enable = true;
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      sansSerif = [ "Inter" ];
+      serif = [ "Inter" ]; 
+    };  
+  };
 
   home.stateVersion = "24.05";
 
