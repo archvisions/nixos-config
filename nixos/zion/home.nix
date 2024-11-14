@@ -9,7 +9,6 @@
   ]; 
   
   home.packages = with pkgs; [
-   yazi
    gh
    git
    (blender.override {cudaSupport=true;})
@@ -18,10 +17,7 @@
    nerdfonts
    networkmanagerapplet
    adwaita-icon-theme
-   dunst
-   joplin-desktop
    inter
-   alacritty
    dmenu
    feh
    mullvad-browser

@@ -8,6 +8,7 @@
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, sops-nix, ... }: {
@@ -23,10 +24,17 @@
           ./nixos/zion/default.nix
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.archvisions = import ./nixos/zion/home.nix;
-            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager = { 
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = { inherit inputs; };
+              users.archvisions = { 
+              imports = [ 
+                ./nixos/zion/home.nix
+                inputs.catppuccin.homeManagerModules.catppuccin
+                ];
+              };
+            };
           }
         ];
       };
