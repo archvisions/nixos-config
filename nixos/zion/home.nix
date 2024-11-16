@@ -14,6 +14,7 @@
    (blender.override {cudaSupport=true;})
    xorg.xinit
    signal-desktop
+   restic
    nerdfonts
    networkmanagerapplet
    adwaita-icon-theme
