@@ -25,4 +25,4 @@ jobs:
          commit-msg: "Bump flake.lock"
          pr-title: "Bump flake.lock"
          token: ${{ secrets.GH_TOKEN }}
-      - run: "gh pr merge --auto --merge master"
+      - run: "gh pr merge --auto --merge update_flake_lock_action"
