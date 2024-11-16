@@ -65,6 +65,7 @@
   environment.systemPackages = with pkgs; [
     wget
     vim
+    ntfs3g
   ];
 
   # Open ports in the firewall.
