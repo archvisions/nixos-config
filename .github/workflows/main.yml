@@ -1,52 +1,33 @@
----
-name: Update flake lock
+name: Bump flake.lock
 
-"on":
+on:
   schedule:
-    - cron: 0 11 * * *
+    - cron: "0 11 * * *"
+
   workflow_dispatch:
 
-env:
-  BRANCH_NAME: auto-flake-update
-
 jobs:
-  update:
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+
     steps:
-      - name: Install nix
-        uses: DeterminateSystems/nix-installer-action@main
-
-      - name: Check out repository code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
+
+      - uses: cachix/install-nix-action@v20
+
+      - run: nix flake update
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Bump flake.lock
+          branch: main
+          commit_options: '--no-verify --signoff'
+          file_pattern: flake.lock
           token: ${{ secrets.GH_TOKEN }}
-
-      - name: Create branch
-        run: |
-          git fetch
-          branch_exists=$(git branch --list "$BRANCH_NAME")
-          if [ -z "$branch_exists" ]; then
-            git checkout -b "$BRANCH_NAME"
-          else
-            git checkout "$BRANCH_NAME"
-            git reset --hard origin/master
-          fi
-
-      - name: Update lock
-        run: |
-          git config user.name 'github-actions'
-          git config user.email 'actions@github.com'
-          nix flake update --commit-lock-file
-          git push --force --set-upstream origin "$BRANCH_NAME"
-
-      - name: Open a PR
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          gh pr create \
-            --base master \
-            --head "$BRANCH_NAME" \
-            --title "[Flake] Auto update lock" \
-            --body "" \
-            --label automated || exit 0
+          commit_user_name: Flake Bot # defaults to "GitHub Actions"
+          #commit_user_email: my-github-actions-bot@example.org # defaults to "actions@github.com"
+          commit_author: Flake Bot <actions@github.com> # defaults to author of the commit that triggered the run
+          skip_dirty_check: false    
+          skip_fetch: true
