@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   home.username = "archvisions";
@@ -11,7 +11,7 @@
   home.packages = with pkgs; [
    gh
    git
-   (blender.override {cudaSupport=true;})
+   blender_4_2
    xorg.xinit
    signal-desktop
    restic

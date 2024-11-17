@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   imports =
@@ -10,6 +10,9 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Overlay Blender
+  nixpkgs.overlays = [ inputs.blender-bin.overlays.default ];
 
   # Networking
   networking.hostName = "zion";
@@ -61,6 +64,7 @@
       xorg.libXinerama
     ];
   };
+
   # System packages
   environment.systemPackages = with pkgs; [
     wget

@@ -25,9 +25,13 @@
       url = "github:catppuccin/nix";
     };
 
+    blender-bin = { 
+      url = "github:archvisions/nix-warez?dir=blender";
+    };
+  
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, blender-bin, ... }: {
 
     nixosConfigurations = {
 
