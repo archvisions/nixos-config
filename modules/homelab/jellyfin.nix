@@ -1,6 +1,9 @@
 { pkgs, lib, ... }:
 
 {
+  users.groups.nas = {};
+  users.users.jellyfin.extraGroups = [ "nas" ];
+
   nixpkgs.config.packageOverrides = pkgs: {
     vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
   };

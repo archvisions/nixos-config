@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+  users.groups.nas = {};
+  users.users.nextcloud.extraGroups = [ "nas" ];
+
   sops.secrets.nextcloud = {
     sopsFile = ../../secrets/secrets.yaml;
     owner = "nextcloud";
