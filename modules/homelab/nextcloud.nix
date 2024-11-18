@@ -39,9 +39,9 @@
         inherit calendar contacts notes tasks;
 
         news = pkgs.fetchNextcloudApp rec {
-          url =
-            "https://github.com/nextcloud/news/releases/download/25.0.0-alpha14/news.tar.gz";
-          sha256 = "sha256-XgBwUr26qW6wvqhrnhhhhcN4wkI+eXDHnNSm1HDbP6M=";
+          url = "https://github.com/nextcloud/news/releases/download/25.0.0-alpha14/news.tar.gz";
+          sha256 = "sha256-6A6tUD14hEo51es0Egn0Bk1RZjXjW1KSq/Mk3P0C/Xw=";
+          license = "gpl3";
         };
 
       };
