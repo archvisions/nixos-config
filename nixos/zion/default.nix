@@ -54,8 +54,6 @@
      shell = pkgs.zsh;
      extraGroups = [ "wheel" ];
    };
-
-  programs.hyprland.enable = true;
   
   # Enable DWM
   services.xserver.windowManager.dwm.enable = true;
