@@ -13,6 +13,7 @@
    git
    blender_4_2
    xorg.xinit
+   iotas
    signal-desktop
    restic
    nerdfonts
