@@ -20,7 +20,12 @@
   networking.networkmanager.dns = "none";
   networking.nameservers = [ "192.168.12.117" ];
 
+  # Set Default Shell as ZSH
+  programs.zsh.enable = true;
+
+  # Mullvad VPN
   services.mullvad-vpn.enable = true; 
+
   # Allow Unfree repo
   nixpkgs.config.allowUnfree = true;
 
@@ -46,6 +51,7 @@
   # Add user packages and user archvisions
   users.users.archvisions = {
      isNormalUser = true;
+     shell = pkgs.zsh;
      extraGroups = [ "wheel" ];
    };
   

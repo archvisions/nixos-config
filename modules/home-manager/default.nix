@@ -6,7 +6,6 @@
     ./gtk.nix
     ./dunst.nix
     ./yazi.nix
-    ./starship.nix
-    ./bash.nix
+    ./zsh.nix
   ];
 }
