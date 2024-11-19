@@ -32,6 +32,7 @@
    fira-code
    thunderbird
    brightnessctl   
+   # Slstatus Override
    (slstatus.overrideAttrs (_: { src = fetchGit {
      url = https://github.com/archvisions/slstatus_dwm.git;
      ref = "master";

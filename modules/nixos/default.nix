@@ -4,5 +4,6 @@
     ./pipewire.nix
     ./nvidia.nix
     ./nfs.nix
+    ./dwm.nix
   ];
 }
