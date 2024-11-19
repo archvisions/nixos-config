@@ -14,11 +14,16 @@ services.blocky = {
     enable = true;
     settings = {
       ports.dns = 53;
-      upstreams.groups.default = [
-        "https://dns.quad9.net/dns-query"
-      ];
+      upstreams = {
+        strategy = "parallel_best";
+        groups.default = [
+          "https://dns.quad9.net/dns-query"
+          "https://dns.mullvad.net/dns-query"
+          "https://dns.nextdns.io"
+        ];
+      };
       bootstrapDns = {
-        upstream = "https://dns.quad9.net/dns-query";
+        upstream = [ "https://dns.quad9.net/dns-query" "https://dns.mullvad.net/dns-query" "https://dns.nextdns.io" ];
         ips = [ "9.9.9.9" ];
       };
       customDNS = {
