@@ -21,10 +21,6 @@ services.blocky = {
           "https://dns.nextdns.io"
         ];
       };
-      bootstrapDns = {
-        upstream = [ "https://dns.quad9.net/dns-query" "https://dns.mullvad.net/dns-query" "https://dns.nextdns.io" ];
-        ips = [ "9.9.9.9" ];
-      };
       customDNS = {
         customTTL = "1h";
         filterUnmappedTypes = true;
@@ -73,13 +69,6 @@ services.blocky = {
             *.samsungcloud.com
             *.secb2b.com
 
-          '')
-          ];
-        };
-        allowlists = {
-          no_gafam = [
-          (pkgs.writeText "whitelist.txt" ''
-            storage.signal.org
           '')
           ];
         };
