@@ -15,7 +15,6 @@ services.blocky = {
     settings = {
       ports.dns = 53;
       upstreams = {
-        strategy = "parallel_best";
         groups.default = [
           "https://dns.quad9.net/dns-query"
           "https://dns.mullvad.net/dns-query"
