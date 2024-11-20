@@ -11,12 +11,17 @@
   home.packages = with pkgs; [
    gh
    git
+   (retroarch.override {
+    cores = with libretro; [
+      mesen
+    ];
+   })
    blender_4_2
    xorg.xinit
    iotas
    signal-desktop
    restic
-   nerdfonts
+   (nerdfonts.override { fonts = [ "FiraCode" ]; })
    networkmanagerapplet
    adwaita-icon-theme
    inter
