@@ -48,7 +48,7 @@
           "max-players" = 4;
           "gamemode" = "survival";
           "online-mode" = false;
-          "enable-command-block" = false;
+          "enable-command-block" = true;
           "log-ips" = false;
           "motd" = "ArchVisions' SMP";
           "view-distance" = 10;
