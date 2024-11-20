@@ -21,17 +21,18 @@
       url = "github:Infinidoge/nix-minecraft";
     };
 
-    catppuccin = {
-      url = "github:catppuccin/nix";
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     blender-bin = { 
       url = "github:archvisions/nix-warez?dir=blender";
     };
-  
+
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, blender-bin, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, ... }: {
 
     nixosConfigurations = {
 
@@ -39,6 +40,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./nixos/zion/default.nix
+          inputs.stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
             home-manager = { 
@@ -48,7 +50,6 @@
               users.archvisions = { 
               imports = [ 
                 ./nixos/zion/home.nix
-                inputs.catppuccin.homeManagerModules.catppuccin
                 ];
               };
             };
