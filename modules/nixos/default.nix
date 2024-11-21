@@ -5,5 +5,6 @@
     ./nvidia.nix
     ./nfs.nix
     ./dwm.nix
+    ./stylix.nix
   ];
 }
