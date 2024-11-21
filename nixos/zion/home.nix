@@ -48,10 +48,6 @@
 
   fonts.fontconfig = {
     enable = true;
-    defaultFonts = {
-      sansSerif = [ "Inter" ];
-      serif = [ "Inter" ]; 
-    };  
   };
 
   home.stateVersion = "24.05";
