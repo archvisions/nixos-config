@@ -27,7 +27,7 @@
     };
 
     blender-bin = { 
-      url = "github:archvisions/nix-warez?dir=blender";
+      url = "github:edolstra/nix-warez?dir=blender";
     };
 
   };

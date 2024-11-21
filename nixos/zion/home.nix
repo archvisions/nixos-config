@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs,...}:
 
 {
   home.username = "archvisions";
@@ -11,14 +11,9 @@
   home.packages = with pkgs; [
    gh
    git
-   (retroarch.override {
-    cores = with libretro; [
-      mesen
-    ];
-   })
-   blender_4_2
-   xorg.xinit
+   blender_4_3
    iotas
+   microfetch
    signal-desktop
    restic
    (nerdfonts.override { fonts = [ "FiraCode" ]; })
@@ -36,7 +31,7 @@
    brave
    fira-code
    thunderbird
-   brightnessctl   
+   brightnessctl
    # Slstatus Override
    (slstatus.overrideAttrs (_: { src = fetchGit {
      url = https://github.com/archvisions/slstatus_dwm.git;

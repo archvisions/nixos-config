@@ -72,16 +72,16 @@
       },
       "locked": {
         "dir": "blender",
-        "lastModified": 1731728363,
-        "narHash": "sha256-Whs4j2Ew7wnT/Wtbq3i/aCGvU+gz5iNwu+z8YTgQdyc=",
-        "owner": "archvisions",
+        "lastModified": 1732104555,
+        "narHash": "sha256-SNJZImAnv2crddcKbV/QZd9p8F76CdlW6KDPtWuNh1o=",
+        "owner": "edolstra",
         "repo": "nix-warez",
-        "rev": "484c76f5d935c5e16a63e13cdbe9d1a795b4e68b",
+        "rev": "35b4a56ef326c382c01d148142f45cb83374b654",
         "type": "github"
       },
       "original": {
         "dir": "blender",
-        "owner": "archvisions",
+        "owner": "edolstra",
         "repo": "nix-warez",
         "type": "github"
       }
