@@ -5,11 +5,11 @@
         "fromYaml": "fromYaml"
       },
       "locked": {
-        "lastModified": 1731966541,
-        "narHash": "sha256-AhX8QQBQLRqEWHftFibTmvlmh157134vzBYXW0LOBKo=",
+        "lastModified": 1732200724,
+        "narHash": "sha256-+R1BH5wHhfnycySb7Sy5KbYEaTJZWm1h+LW1OtyhiTs=",
         "owner": "SenchoPens",
         "repo": "base16.nix",
-        "rev": "d8e769add6333892b44afc107f193074a5072717",
+        "rev": "153d52373b0fb2d343592871009a286ec8837aec",
         "type": "github"
       },
       "original": {
@@ -238,11 +238,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1732153840,
-        "narHash": "sha256-lt8Gdx6TNheby/9lRNE1GMP3vkdpLaXmyHQk+ZvYNAY=",
+        "lastModified": 1732240312,
+        "narHash": "sha256-rvGBe5f74OLBW1sJ4Q3UGkNUbZcgSbMGWcAvWzklbZU=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "8325d463c1c424f2e6edeef2010c0d902a37b3d3",
+        "rev": "9c2f601b2cdfe2c06ce79fed04edd6c28fae2cc0",
         "type": "github"
       },
       "original": {
@@ -346,11 +346,11 @@
         "tinted-tmux": "tinted-tmux"
       },
       "locked": {
-        "lastModified": 1732036949,
-        "narHash": "sha256-prZV8HDVvBqHiJLkjElJYoZ6zonV7cOABb8Z0lWonJA=",
+        "lastModified": 1732261424,
+        "narHash": "sha256-8uTKUHkaU980J5kRnLYrdwmjZYB88eBGUk1oVgIUHFE=",
         "owner": "danth",
         "repo": "stylix",
-        "rev": "4912f4db00bc931c7636d827e829faf01f6bf155",
+        "rev": "b667a340730dd3d0596083aa7c949eef01367c62",
         "type": "github"
       },
       "original": {
