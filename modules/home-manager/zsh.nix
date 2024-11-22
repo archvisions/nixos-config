@@ -6,7 +6,12 @@
     enable = true; 
     enableCompletion = true;
     syntaxHighlighting.enable = true;
-    autosuggestion.enable = true;
+    autosuggestion = {
+      enable = true;
+      highlight = "fg=#cac9c9";
+    };
+
+    initExtra = "microfetch";
 
     oh-my-zsh = {
       enable = true;
