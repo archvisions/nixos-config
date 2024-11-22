@@ -7,5 +7,6 @@
     ./dunst.nix
     ./yazi.nix
     ./zsh.nix
+    ./btop.nix
   ];
 }
