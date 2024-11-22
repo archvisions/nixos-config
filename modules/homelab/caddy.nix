@@ -34,6 +34,11 @@
           reverse_proxy localhost:8096
 
         }
+
+        deluge.archvisions.xyz {
+          import tls
+          reverse_proxy localhost:8111
+        }
     '';
   };
 }

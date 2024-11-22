@@ -10,5 +10,6 @@
     ./nfs.nix
     ./minecraft.nix
     ./nextcloud.nix
+    ./deluge.nix
   ];
 }
