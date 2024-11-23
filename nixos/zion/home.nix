@@ -14,6 +14,8 @@
    blender_4_3
    iotas
    microfetch
+   ffmpeg
+   davinci-resolve
    signal-desktop
    restic
    (nerdfonts.override { fonts = [ "FiraCode" ]; })
