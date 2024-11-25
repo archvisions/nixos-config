@@ -3,6 +3,7 @@
     ./sops.nix
     ./wireguard.nix
     ./caddy.nix
+    ./invidious.nix
     ./vaultwarden.nix
     ./blocky.nix
     ./ssh.nix

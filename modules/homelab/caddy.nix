@@ -32,12 +32,16 @@
         media.archvisions.xyz {
           import tls
           reverse_proxy localhost:8096
-
         }
 
         deluge.archvisions.xyz {
           import tls
           reverse_proxy localhost:8111
+        }
+
+        yt.archvisions.xyz {
+          import tls
+          reverse_proxy localhost:3000
         }
     '';
   };
